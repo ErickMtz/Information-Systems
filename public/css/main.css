@@ -1,0 +1,29 @@
+.tableContainer {
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.tableHead {
+	background-color: #c0dfd9;
+}
+
+.input {
+	margin-bottom: 10px;
+}
+
+.myFooter {
+	background-color: #3b3a36;
+	border-color: #3b3a36;
+}
+
+.myNavBar {
+	background-color: #3b3a36;
+	border-color: #3b3a36; 
+
+}
+
+.footerText {
+	color: #8d9d96;
+	text-align: center;
+	padding-top: 10px;
+} 

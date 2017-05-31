@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="company" ng-controller="MainController" >
+<head>
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="public/images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="public/css/main.css">
+</head>
+<body >
+  <div ng-include = "'views/partials/menu.html'"></div>
+  <div ng-include = "'views/partials/table.html'"></div>
+  
+
+  <div class="modal fade" id="modalAddEmployee" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+          <h3>{{windowTitle}}</h3>
+        </div>
+        <div class="modal-body" ng-include = "'views/partials/form.html'">
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" data-dismiss="modal" class="btn btn-success" ng-click="addEmployee()">Add</a>
+          <a href="#" data-dismiss="modal" class="btn btn-warning" ng-click="cancel()">Cancel</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modalDeleteUpdate" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+          <h3>{{windowTitle}}</h3>
+        </div>
+        <div class="modal-body" ng-include = "'views/partials/form.html'">
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" data-dismiss="modal" class="btn btn-info" ng-click="updateEmployee()">Update</a>
+          <a href="#" data-dismiss="modal" class="btn btn-danger" ng-click="deleteEmployee()">Delete</a>
+          <a href="#" data-dismiss="modal" class="btn btn-warning" ng-click="cancel()">Cancel</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-include = "'views/partials/footer.html'"></div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="angular/angular.min.js"></script>
+  <script type="text/javascript" src="public/app.js"></script>
+
+</body>
+</html>
